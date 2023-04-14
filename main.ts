@@ -1,15 +1,25 @@
 input.onButtonPressed(Button.A, function () {
-    wuKong.setMotorSpeed(wuKong.MotorList.M1, 100)
-    wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S0, 100)
+    basic.pause(500)
+    wuKong.setAllMotor(100, 20)
+    basic.pause(1000)
+    wuKong.stopAllMotor()
 })
 input.onButtonPressed(Button.AB, function () {
+    basic.pause(500)
+    wuKong.setAllMotor(100, 100)
+    basic.pause(1000)
     wuKong.stopAllMotor()
 })
 input.onButtonPressed(Button.B, function () {
-    wuKong.setMotorSpeed(wuKong.MotorList.M1, -100)
-    wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S0, 300)
+    basic.pause(500)
+    wuKong.setAllMotor(0, 100)
+    basic.pause(1000)
+    wuKong.stopAllMotor()
 })
-basic.showIcon(IconNames.Happy)
-basic.forever(function () {
-	
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.pause(500)
+    wuKong.setAllMotor(-100, -100)
+    basic.pause(1000)
+    wuKong.stopAllMotor()
 })
+basic.showIcon(IconNames.Surprised)
