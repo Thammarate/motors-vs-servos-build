@@ -12,7 +12,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     basic.pause(500)
-    wuKong.setAllMotor(0, 100)
+    wuKong.setAllMotor(20, 100)
     basic.pause(1000)
     wuKong.stopAllMotor()
 })
